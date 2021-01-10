@@ -55,7 +55,13 @@ public class Character : MonoBehaviour
             return;
         }
 
-        if(state == State.Dead)
+        if (target.state == State.Dead)
+        {
+            Debug.LogWarning("Character is already dead");
+            return;
+        }
+
+        if (state == State.Dead)
         {
             Debug.LogWarning("Character is dead");
             return;
